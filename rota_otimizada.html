@@ -1,0 +1,126 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Rota Otimizada - Logística Hospitalar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        .summary-box {
+            background-color: #e6f7ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .summary-box p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .checklist ol {
+            list-style-type: decimal;
+            padding-left: 25px;
+        }
+        .checklist li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 1.05em;
+            line-height: 1.4;
+        }
+        .risk-analysis {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 4px;
+            color: #664d03;
+        }
+        .risk-analysis p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .risk-analysis strong {
+            color: #856404;
+        }
+        .risk-analysis ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        .risk-analysis li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Rota Otimizada - Logística Hospitalar</h1>
+
+        <h2>1. Resumo da Eficiência da Rota</h2>
+        <div class="summary-box">
+            <p><strong>Custo Total Estimado:</strong> R$ 86840.10</p>
+            <p><strong>Número de Paradas:</strong> 5</p>
+            <p>Este resumo apresenta os principais indicadores da rota planejada, visando otimização de recursos e tempo para as entregas hospitalares.</p>
+        </div>
+
+        <h2>2. Instruções para o Motorista (Checklist)</h2>
+        <div class="checklist">
+            <p>Siga a ordem abaixo para realizar as entregas. Atenção às janelas de horário designadas para cada ponto:</p>
+            <ol>
+                <li>Dirija-se à entrega <strong>ID 1</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 3</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 0</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 2</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 4</strong>.</li>
+            </ol>
+        </div>
+
+        <h2>3. Análise de Risco de Atraso</h2>
+        <div class="risk-analysis">
+            <p><strong>Qualquer ponto da rota parece ter um risco de atraso?</strong></p>
+            <p>Sim, a rota apresentada possui um <strong>risco extremamente elevado de atraso e, mais precisamente, é inviável de ser executada conforme a sequência e janelas de horário fornecidas.</strong></p>
+            <p>Ao analisar a "Ordem de visita" em conjunto com as "Janelas de Horário", notamos uma inconsistência cronológica crítica:</p>
+            <ul>
+                <li>A primeira parada listada (ID 1) tem janela de <strong>11h-12h</strong>.</li>
+                <li>A segunda parada (ID 3) tem janela de <strong>9h-10h</strong>.</li>
+                <li>A terceira parada (ID 0) tem janela de <strong>9h-10h</strong>.</li>
+                <li>A quarta parada (ID 2) tem janela de <strong>9h-11h</strong>.</li>
+                <li>A quinta e última parada (ID 4) tem janela de <strong>8h-9h</strong>.</li>
+            </ul>
+            <p>É impossível visitar uma parada com janela de 11h-12h (ID 1) e, em seguida, "voltar no tempo" para visitar paradas com janelas de 9h-10h (ID 3, ID 0), 9h-11h (ID 2) ou 8h-9h (ID 4). A sequência de visitas fornecida não respeita a progressão temporal das janelas de horário exigidas. A execução desta rota na ordem especificada resultaria em atrasos inevitáveis e no não cumprimento das janelas de horário para a maioria das entregas.</p>
+            <p><strong>Recomendação:</strong> A rota deve ser urgentemente reotimizada. É fundamental que a ordem das paradas seja reavaliada para respeitar as janelas de tempo de forma cronológica, garantindo que cada parada seja visitada dentro do seu intervalo de tempo válido. Alternativamente, as janelas de horário devem ser revisadas para se adequarem a uma sequência de paradas logisticamente viável.</p>
+        </div>
+    </div>
+</body>
+</html>
+```
