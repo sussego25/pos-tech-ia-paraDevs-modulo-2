@@ -8,77 +8,96 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
             color: #333;
+            background-color: #f4f7f6;
         }
         .container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-top: 30px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         h1 {
-            font-size: 2em;
+            color: #004085;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 15px;
         }
         h2 {
-            font-size: 1.5em;
+            color: #0056b3;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 1.6em;
         }
-        .summary-box {
-            background-color: #e6f7ff;
-            border-left: 5px solid #007bff;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 4px;
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
+            font-size: 1.2em;
         }
-        .summary-box p {
-            margin: 5px 0;
-            font-size: 1.1em;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .checklist ol {
-            list-style-type: decimal;
+        ol {
             padding-left: 25px;
         }
-        .checklist li {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
+        ul li, ol li {
+            background: #f8f9fa;
             margin-bottom: 8px;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 1.05em;
-            line-height: 1.4;
+            padding: 12px 18px;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        ul li:hover, ol li:hover {
+            background-color: #e9f5ff;
+        }
+        .summary p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        .summary strong {
+            color: #004085;
         }
         .risk-analysis {
-            background-color: #fff3cd;
+            background: #fff3cd;
             border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin-top: 25px;
-            border-radius: 4px;
-            color: #664d03;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
         }
-        .risk-analysis p {
-            margin: 5px 0;
-            font-size: 1.1em;
+        .risk-analysis h2 {
+            color: #856404;
+            border-bottom-color: #ffeeba;
         }
-        .risk-analysis strong {
+        .risk-analysis h3 {
             color: #856404;
         }
-        .risk-analysis ul {
-            list-style-type: disc;
-            padding-left: 25px;
+        .risk-analysis ul li {
+             border-left: 3px solid #ffc107;
+             background: #ffeeba;
         }
-        .risk-analysis li {
-            margin-bottom: 5px;
+        .risk-analysis ul li:hover {
+             background: #ffecb3;
+        }
+        .risk-analysis p {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        .note {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 15px;
+            padding-left: 5px;
         }
     </style>
 </head>
@@ -86,40 +105,64 @@
     <div class="container">
         <h1>Relatório de Rota Otimizada - Logística Hospitalar</h1>
 
-        <h2>1. Resumo da Eficiência da Rota</h2>
-        <div class="summary-box">
-            <p><strong>Custo Total Estimado:</strong> R$ 86840.10</p>
-            <p><strong>Número de Paradas:</strong> 5</p>
-            <p>Este resumo apresenta os principais indicadores da rota planejada, visando otimização de recursos e tempo para as entregas hospitalares.</p>
-        </div>
+        <section class="summary">
+            <h2>1. Resumo da Eficiência da Rota</h2>
+            <p>Este relatório detalha a rota otimizada para as entregas hospitalares, focando na eficiência e na gestão de tempo.</p>
+            <p><strong>Custo Total da Rota:</strong> R$ 209141.12</p>
+            <p><strong>Número de Paradas:</strong> 15</p>
+            <p class="note">A otimização desta rota teve como objetivo principal minimizar o custo total, o que inclui a consideração de multas por violação de SLA (Service Level Agreement) em janelas de tempo. Isso significa que algumas entregas podem ocorrer fora de suas janelas preferenciais, pois essa abordagem resultou no menor custo operacional global.</p>
+        </section>
 
-        <h2>2. Instruções para o Motorista (Checklist)</h2>
-        <div class="checklist">
-            <p>Siga a ordem abaixo para realizar as entregas. Atenção às janelas de horário designadas para cada ponto:</p>
+        <section class="instructions">
+            <h2>2. Instruções para o Motorista (Checklist)</h2>
+            <p>Por favor, siga a sequência de entregas abaixo. Concentre-se nos IDs das entregas para a navegação.</p>
             <ol>
-                <li>Dirija-se à entrega <strong>ID 1</strong>.</li>
-                <li>Dirija-se à entrega <strong>ID 3</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 8</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 7</strong>.</li>
                 <li>Dirija-se à entrega <strong>ID 0</strong>.</li>
-                <li>Dirija-se à entrega <strong>ID 2</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 10</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 5</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 12</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 1</strong>.</li>
                 <li>Dirija-se à entrega <strong>ID 4</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 2</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 13</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 14</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 9</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 11</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 6</strong>.</li>
+                <li>Dirija-se à entrega <strong>ID 3</strong>.</li>
             </ol>
-        </div>
+        </section>
 
-        <h2>3. Análise de Risco de Atraso</h2>
-        <div class="risk-analysis">
-            <p><strong>Qualquer ponto da rota parece ter um risco de atraso?</strong></p>
-            <p>Sim, a rota apresentada possui um <strong>risco extremamente elevado de atraso e, mais precisamente, é inviável de ser executada conforme a sequência e janelas de horário fornecidas.</strong></p>
-            <p>Ao analisar a "Ordem de visita" em conjunto com as "Janelas de Horário", notamos uma inconsistência cronológica crítica:</p>
+        <section class="risk-analysis">
+            <h2>3. Análise de Riscos e Janelas de Tempo</h2>
+            <h3>Qualquer ponto da rota parece ter um risco de atraso?</h3>
+            <p>Analisando a sequência das paradas e as janelas de horário, identificamos os seguintes pontos importantes:</p>
             <ul>
-                <li>A primeira parada listada (ID 1) tem janela de <strong>11h-12h</strong>.</li>
-                <li>A segunda parada (ID 3) tem janela de <strong>9h-10h</strong>.</li>
-                <li>A terceira parada (ID 0) tem janela de <strong>9h-10h</strong>.</li>
-                <li>A quarta parada (ID 2) tem janela de <strong>9h-11h</strong>.</li>
-                <li>A quinta e última parada (ID 4) tem janela de <strong>8h-9h</strong>.</li>
+                <li>
+                    <strong>Ociosidade/Espera Programada:</strong>
+                    <p>Entre a entrega <strong>ID 8</strong> (janela 11h-12h) e a próxima parada, <strong>ID 7</strong> (janela 16h-18h), há um intervalo significativo. Isso indica que o motorista, após concluir a entrega ID 8 por volta das 12h, provavelmente chegará à ID 7 bem antes das 16h. Haverá um período de espera considerável (cerca de 4 horas) até que a janela de atendimento da ID 7 se inicie. Este é um ponto de ociosidade operacional que, embora planejado para otimizar o custo total, deve ser gerenciado pelo motorista (ex: pausa para almoço, descanso).</p>
+                </li>
+                <li>
+                    <strong>Violações de Janela de Tempo (Planejadas):</strong>
+                    <p>Conforme a estratégia de otimização de custo, algumas janelas de entrega serão violadas intencionalmente. As multas por SLA já foram calculadas e aceitas no custo total da rota, pois essa abordagem resultou na opção mais econômica. O motorista deve estar ciente de que chegará fora do período preferencial para as seguintes entregas:</p>
+                    <ul>
+                        <li><strong>ID 0:</strong> Janela 12h-14h (visitada após ID 7, cuja janela é 16h-18h).</li>
+                        <li><strong>ID 10:</strong> Janela 9h-10h (visitada após ID 0).</li>
+                        <li><strong>ID 5:</strong> Janela 14h-15h (visitada após ID 10).</li>
+                        <li><strong>ID 12:</strong> Janela 9h-10h (visitada após ID 5).</li>
+                        <li><strong>ID 1:</strong> Janela 11h-12h (visitada após ID 12).</li>
+                        <li><strong>ID 4:</strong> Janela 15h-16h (dada a sequência e as janelas anteriores, é altamente provável que esta janela também seja perdida).</li>
+                        <li><strong>ID 14:</strong> Janela 8h-10h (sendo a 11ª parada, será significativamente atrasada).</li>
+                        <li><strong>ID 11:</strong> Janela 9h-10h (sendo a 13ª parada, será significativamente atrasada).</li>
+                        <li><strong>ID 6:</strong> Janela 9h-10h (sendo a 14ª parada, será significativamente atrasada).</li>
+                    </ul>
+                    <p class="note">Essas violações não representam um "risco de atraso" imprevisto ou um erro de planejamento, mas sim uma consequência calculada e aceita da estratégia de otimização de menor custo.</p>
+                </li>
             </ul>
-            <p>É impossível visitar uma parada com janela de 11h-12h (ID 1) e, em seguida, "voltar no tempo" para visitar paradas com janelas de 9h-10h (ID 3, ID 0), 9h-11h (ID 2) ou 8h-9h (ID 4). A sequência de visitas fornecida não respeita a progressão temporal das janelas de horário exigidas. A execução desta rota na ordem especificada resultaria em atrasos inevitáveis e no não cumprimento das janelas de horário para a maioria das entregas.</p>
-            <p><strong>Recomendação:</strong> A rota deve ser urgentemente reotimizada. É fundamental que a ordem das paradas seja reavaliada para respeitar as janelas de tempo de forma cronológica, garantindo que cada parada seja visitada dentro do seu intervalo de tempo válido. Alternativamente, as janelas de horário devem ser revisadas para se adequarem a uma sequência de paradas logisticamente viável.</p>
-        </div>
+            <p>Em resumo, o principal ponto de atenção para o motorista é a longa espera entre a entrega ID 8 e ID 7. As demais violações de janela são esperadas e já consideradas no planejamento da rota.</p>
+        </section>
     </div>
 </body>
 </html>
