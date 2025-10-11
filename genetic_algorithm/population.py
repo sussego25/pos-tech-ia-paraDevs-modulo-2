@@ -8,7 +8,7 @@ import config
 
 def get_fixed_problem_set(num_cities: int) -> List[Dict[str, Any]]:
     """Cria um conjunto fixo de entregas (cidades) com base em uma semente."""
-    random.seed(42)  # Semente para garantir a reprodutibilidade dos problemas
+    random.seed(77)  # Semente para garantir a reprodutibilidade dos problemas
     fixed_deliveries = []
     for i in range(num_cities):
         start_time = random.randint(8, 16)
