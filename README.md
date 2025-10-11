@@ -41,13 +41,8 @@ Ao final da simulação, o usuário pode solicitar um relatório gerado por IA.
 
 Siga os passos abaixo para configurar o ambiente e instalar as dependências necessárias.
 
-**1. Clone o repositório:**
-```bash
-git clone <URL_DO_SEU_REPOSITORIO>
-cd <NOME_DO_DIRETORIO>
-```
 
-**2. Crie um ambiente virtual (Recomendado):**
+**1. Crie um ambiente virtual (Recomendado):**
 Isso isola as dependências do seu projeto.
 
 ```bash
@@ -60,7 +55,7 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-**3. Crie o arquivo `requirements.txt`:**
+**2. Crie o arquivo `requirements.txt`:**
 Crie um arquivo com o nome `requirements.txt` na raiz do projeto e adicione o seguinte conteúdo:
 
 ```
@@ -70,7 +65,7 @@ langchain-google-genai
 langchain
 ```
 
-**4. Instale as bibliotecas:**
+**3. Instale as bibliotecas:**
 Execute o comando abaixo no terminal para instalar todas as bibliotecas de uma vez.
 
 ```bash
